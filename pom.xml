@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.dromedary</groupId>
+    <artifactId>dromedary</artifactId>
+    <version>${dromedary.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <dromedary.version>0.0.1-SNAPSHOT</dromedary.version>
+
+        <!-- 3-rd parties -->
+        <concordion.version>1.4.3</concordion.version>
+        <concordion-extensions.version>1.1.0</concordion-extensions.version>
+        <spring.version>3.0.3.RELEASE</spring.version>
+        <commons-io.version>2.4</commons-io.version>
+        <commons-lang.version>2.4</commons-lang.version>
+        <junit.version>4.8.2</junit.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.concordion</groupId>
+                <artifactId>concordion</artifactId>
+                <version>${concordion.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.concordion</groupId>
+                <artifactId>concordion-extensions</artifactId>
+                <version>${concordion-extensions.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>ext</module>
+        <module>example</module>
+    </modules>
+</project>

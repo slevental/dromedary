@@ -1,0 +1,22 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion"
+      xmlns:dromedary="http://www.dromedary.org/schema">
+<link href="../../concordion.css" rel="stylesheet" type="text/css"/>
+<body>
+
+<h1>File matcher</h1>
+
+<p>
+    Class should copy file from one place to another
+    and replace multiple spaces with one
+</p>
+
+<div>
+    <h3>Simple example</h3>
+    <p concordion:execute="execute()">When we have multiple spaces like:</p>
+    <b class="example" dromedary:file="${file1}">Hello world !!!</b>
+    <p>our program should replace spaces and file will be looks like this:</p>
+    <b class="example" dromedary:assertFile="${file2}">Hello world !!!</b>
+</div>
+
+</body>
+</html>
